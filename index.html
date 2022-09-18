@@ -1,0 +1,27 @@
+String obtenerInterfaz()
+{
+  String HtmlRespuesta = "<!DOCTYPE html>"
+                         "<html lang='en'>"
+                         "<head>"
+                         "<meta charset='UTF-8'>"
+                         "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+                         "<title>LEDS by parzibyte</title>"
+                         "</head>"
+                         "<body>";
+  HtmlRespuesta += "<h1>Encender y apagar LED</h1>";
+  HtmlRespuesta += "<p>El LED est&aacute; actualmente ";
+  if (estadoDelLED)
+  {
+    HtmlRespuesta += "encendido</p>";
+    HtmlRespuesta += "<a href='/apagar'>Apagar</a>";
+  }
+  else
+  {
+    HtmlRespuesta += "apagado</p>";
+    HtmlRespuesta += "<a href='/encender'>Encender</a>";
+  }
+  HtmlRespuesta += "<br><a href='https://parzibyte.me/blog'>By parzibyte</a>";
+  HtmlRespuesta += "</body>"
+                   "</html>";
+  return HtmlRespuesta;
+}
